@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>UsersMicroblogSignup</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title>Users Microblog Signup</title>
+		<%= csrf_meta_tag %>
 
-<%= yield %>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
 
-</body>
+		<%= stylesheet_link_tag 'custom', :media => 'screen' %>
+		<%= stylesheet_link_tag 'application', :media => 'screen' %>
+		<%= stylesheet_link_tag 'blueprint/screen', :media=> 'screen' %>
+		<%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
+
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<%= image_tag( "logo.png",:alt => "Sample App",:class => "Round"  )%>
+				<nav class="round">
+					<ul>
+						<li>
+							<%= link_to "Home", "/" %>
+						</li>
+						<li>
+							<%= link_to "Help","#" %>
+						</li>
+						<li>
+							<%= link_to "Sign in","#" %>
+						</li>
+						<li>
+							<%= link_to "Conatct US", contact_path %>
+						</li>
+					</ul>
+				</nav>
+		</div>
+		<section class="round">
+			<%= yield %>
+		</section
+
+	</body>
 </html>
