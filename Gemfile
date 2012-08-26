@@ -33,6 +33,9 @@ gem 'jquery-rails'
 
 # Deploy with Capistrano
 # gem 'capistrano'
+gem 'mysql2'
+gem 'gravatar_image_tag', '0.1.0'
+
 
 # To use debugger
 # gem 'debugger'

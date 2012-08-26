@@ -1,4 +1,6 @@
 UsersMicroblogSignup::Application.routes.draw do
+  get "users/new"
+ get "users/show"
   get "pages/home"
 
   get "pages/contact"
@@ -55,6 +57,9 @@ UsersMicroblogSignup::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'pages#home'
   match '/contact' => 'pages#contact'
+  match '/signup', :to => 'users#new'
+  match '/users/:id',:to=> 'users#show'
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
